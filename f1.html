@@ -1,0 +1,376 @@
+<!doctype html>
+<title>Lab 6</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100vh;
+        flex-wrap: wrap;
+    }
+    
+    .container>div {
+        font-size: 40px;
+        position: center;
+        padding: .5em;
+        color: white;
+        margin: 10px;
+        border-radius: 3px;
+        background: yellowgreen;
+        border: 5px solid black;
+    }
+    
+    .container>div:nth-child(odd) {
+        width: 10%;
+        font-size: 25px;
+        background: gray;
+    }
+    
+    .container>div:nth-child(even) {
+        width: 20%;
+    }
+    
+    .container>div:nth-child(2),
+    .container>div:nth-child(4),
+    .container>div:nth-child(9) {
+        width: 60%;
+    }
+    
+    .container>div:nth-child(1) {
+        width: 25%;
+        background: indianred;
+    }
+    
+    .container>div:nth-child(2) {
+        background: royalblue;
+    }
+    
+    .container>div:nth-child(4) {
+        background: maroon;
+    }
+    
+    .container>div:nth-child(5) {
+        background: sienna;
+    }
+    
+    .container>div:nth-child(7) {
+        width: 30%;
+        height: 15%;
+        font-size: 25px;
+        background: rgba(184, 157, 8, 0.616);
+    }
+    
+    .container>div:nth-child(8) {
+        width: 30%;
+        height: 15%;
+        font-size: 25px;
+        background: rgba(230, 75, 28, 0.733);
+    }
+    
+    .container>div:nth-child(9) {
+        width: 30%;
+        height: 15%;
+        font-size: 25px;
+        background: rgba(9, 53, 150, 0.575);
+    }
+    
+    .container>div:nth-child(10) {
+        width: 30%;
+        height: 15%;
+        font-size: 25px;
+        background: rgba(122, 4, 30, 0.726);
+    }
+    
+    .container>div:nth-child(11) {
+        width: 30%;
+        height: 15%;
+        font-size: 25px;
+        background: rgba(9, 139, 4, 0.671);
+    }
+    
+    .container>div:nth-child(12) {
+        width: 30%;
+        height: 15%;
+        font-size: 25px;
+        background: rgb(3, 59, 50);
+    }
+    
+    .container>div:nth-child(13) {
+        width: 100%;
+        height: 10%;
+        font-size: 25px;
+        background: rgba(30, 9, 148, 0.61);
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    a:hover {
+        color: sandybrown;
+    }
+    
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 200px;
+        perspective: 1000px;
+        /* Remove this if you don't want the 3D effect */
+    }
+    /* This container is needed to position the front and back side */
+    
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    /* Position the front and back side */
+    
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        /* Safari */
+        backface-visibility: hidden;
+    }
+    /* Style the front side (fallback if image is missing) */
+    
+    .flip-card-front {
+        color: black;
+    }
+    /* Style the back side */
+    
+    .flip-card-back {
+        font-size: 20px;
+        color: white;
+        transform: rotateY(180deg);
+    }
+    
+    .flip-card-back>div:nth-child(5) {
+        font-size: x-small;
+        color: black;
+    }
+</style>
+<div class="container">
+    <div>
+        <a href="" alt="home">
+         Home
+        </a><br>
+        <a href="" alt="About Us">
+            About US
+           </a><br>
+        <a href="" alt="Contact">
+            Contact
+           </a><br>
+        <a href="" alt="Inspired From">
+            Inspired From
+           </a><br>
+
+    </div>
+    <div>
+        <center>This page was built using Flexbox Layout</center>
+    </div>
+    <div>
+        <a href="https://github.com/mariasharmagbay/IM115Group1Lab1">
+    Lab 1 <br>
+        <a href="https://github.com/vinayreddie/Group-9-Lab-2" alt="Lab 2">
+              Lab 2
+              </a><br>
+        <a href="https://github.com/vaidehidarji1224/Group2Lab3" alt="Lab 3">
+            Lab 3
+              </a><br>
+        <a href="https://github.com/vinayreddie/Lab-4-Group-9" alt="Lab 4">
+               Lab 4
+              </a><br>
+        <a href="https://github.com/vinayreddie/Group-9-Lab-2" alt="Lab 5">
+                Lab 5
+                  </a><br>
+        <a href="https://github.com/vinayreddie/Group-9-Lab-2" alt="Project">
+                  Project 1
+                      </a><br>
+
+    </div>
+    <div class="flip-card">
+
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <center>
+                    IM 115(Click Me)
+                </center>
+            </div>
+            <div class="flip-card-back">
+
+                <p>This Course consists of various topics in we development like html, css and java script.<br>Through this course we can learn about the basics in the above topics</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <center>
+                    Team Members
+                </center>
+            </div>
+            <div class="flip-card-back">
+                <a href="https://github.com/vinayreddie">
+                    <h5>Vinay Reddy</h5>
+                </a>
+                <a href="https://github.com/prashanthyaddanapudi">
+                    <h5>Prashanth Yaddanapudi</h5>
+                </a>
+                <a href="https://github.com/anishahiwale">
+                    <h5>Anisha Hiwale</h5>
+                </a>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <center>
+                    Group Image
+                </center>
+            </div>
+            <div class="flip-card-back">
+
+                <img src="1.jpeg" alt="TeamMates" height="150px" width="250px">
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="flip-card">
+
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <center>
+                    Lab 1
+                </center>
+            </div>
+            <div class="flip-card-back">
+
+                <p>This lab covered basics in github</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <center>
+                    Lab 2
+                </center>
+            </div>
+            <div class="flip-card-back">
+
+                <p>This lab covered basics in Html, Css tags</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <center>
+                    Lab 3
+                </center>
+            </div>
+            <div class="flip-card-back">
+
+                <p>This lab covered basics in Javascript</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <center>
+                    Lab 4
+                </center>
+            </div>
+            <div class="flip-card-back">
+
+                <p>This lab covered Funtions in Javascript</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="flip-card">
+
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <center>
+                    Lab 5
+                </center>
+            </div>
+            <div class="flip-card-back">
+
+                <p>This lab covered Float Property in CSS</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="flip-card">
+
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <center>
+                    Project 1
+                </center>
+            </div>
+            <div class="flip-card-back">
+
+                <p>In this lab we have designed web pages based on the things we learnt in the above labs</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <center>
+                    Inspired From
+                </center>
+            </div>
+            <div class="flip-card-back">
+
+                <a href="http://flexboxgrid.com/">Flexbox Property</a>
+
+
+            </div>
+        </div>
+    </div>
+</div>
